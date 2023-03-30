@@ -1,0 +1,70 @@
+##########################################################
+Teste 1: subtraindo 40 dias da data encontrada pela lógica
+da subida da curva de NDVI
+##########################################################
+
+early['diff'].describe()
+Out[17]: 
+count    331.000000
+mean      33.498489
+std       22.523843
+min        2.000000
+25%       20.000000
+50%       29.000000
+75%       35.000000
+max      145.000000
+Name: diff, dtype: float64
+
+late['diff'].describe()
+Out[18]: 
+count     21.000000
+mean     -80.142857
+std       55.703039
+min     -220.000000
+25%     -105.000000
+50%      -50.000000
+75%      -39.000000
+max      -36.000000
+Name: diff, dtype: float64
+
+soybean_farms['diff'].between(-30,0).value_counts()
+Out[19]: 
+False    352
+True      54
+Name: diff, dtype: int64
+
+
+##########################################################
+Teste 2: usando a exata data encontrada pela lógica
+da subida da curva de NDVI
+##########################################################
+
+early['diff'].describe()
+Out[33]: 
+count    119.000000
+mean      26.924370
+std       20.655019
+min        1.000000
+25%       14.500000
+50%       20.000000
+75%       40.000000
+max      105.000000
+Name: diff, dtype: float64
+
+late['diff'].describe()
+Out[34]: 
+count    169.000000
+mean     -59.136095
+std       43.557834
+min     -265.000000
+25%      -61.000000
+50%      -46.000000
+75%      -36.000000
+max      -31.000000
+Name: diff, dtype: float64
+
+soybean_farms['diff'].between(-30,0).value_counts()
+Out[35]: 
+True     436
+False    288
+Name: diff, dtype: int64
